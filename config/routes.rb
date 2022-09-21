@@ -5,7 +5,9 @@ Rails.application.routes.draw do
     
     resources :courses do 
       resources :enrollments
+      get '/unenrolled', to: 'enrollments#unenrolledUsers'
     end
+
 
   end
   
